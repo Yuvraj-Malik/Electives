@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>WanderWorld - Booking</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+
+    <!-- Header -->
+    <header>
+
+        <div class="logo">
+            WanderWorld
+        </div>
+
+        <nav>
+
+            <ul>
+
+                <li>
+                    <a href="index.html">Home</a>
+                </li>
+
+                <li>
+                    <a href="packages.html">Packages</a>
+                </li>
+
+                <li>
+                    <a href="booking.html">Booking</a>
+                </li>
+
+                <li>
+                    <a href="gallery.html">Gallery</a>
+                </li>
+
+                <li>
+                    <a href="contact.html">Contact Us</a>
+                </li>
+
+            </ul>
+
+        </nav>
+
+    </header>
+
+
+    <main class="container">
+
+        <h1 class="section-title">
+            Book Your Trip
+        </h1>
+
+
+        <form class="booking-form">
+
+            <!-- Name -->
+            <div class="form-group">
+
+                <label for="name">
+                    Full Name
+                </label>
+
+                <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    placeholder="Enter your full name"
+                    required
+                >
+
+            </div>
+
+
+            <!-- Email -->
+            <div class="form-group">
+
+                <label for="email">
+                    Email Address
+                </label>
+
+                <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    placeholder="Enter your email"
+                    required
+                >
+
+            </div>
+
+
+            <!-- Phone -->
+            <div class="form-group">
+
+                <label for="phone">
+                    Phone Number
+                </label>
+
+                <input
+                    type="tel"
+                    id="phone"
+                    name="phone"
+                    placeholder="Enter your phone number"
+                    required
+                >
+
+            </div>
+
+
+            <!-- Date -->
+            <div class="form-group">
+
+                <label for="date">
+                    Travel Date
+                </label>
+
+                <input
+                    type="date"
+                    id="date"
+                    name="date"
+                    required
+                >
+
+            </div>
+
+
+            <!-- Destination dropdown -->
+            <div class="form-group">
+
+                <label for="destination">
+                    Destination
+                </label>
+
+                <select
+                    id="destination"
+                    name="destination"
+                    required
+                >
+
+                    <option value="">
+                        Select Destination
+                    </option>
+
+                    <option value="manali">
+                        Manali
+                    </option>
+
+                    <option value="goa">
+                        Goa
+                    </option>
+
+                    <option value="jaipur">
+                        Jaipur
+                    </option>
+
+                    <option value="agra">
+                        Agra
+                    </option>
+
+                </select>
+
+            </div>
+
+
+            <!-- Package dropdown -->
+            <div class="form-group">
+
+                <label for="package">
+                    Select Package
+                </label>
+
+                <select
+                    id="package"
+                    name="package"
+                    required
+                >
+
+                    <option value="">
+                        Select Package
+                    </option>
+
+                    <option value="mountain">
+                        Mountain Escape
+                    </option>
+
+                    <option value="rajasthan">
+                        Royal Rajasthan
+                    </option>
+
+                    <option value="beach">
+                        Beach Paradise
+                    </option>
+
+                    <option value="historical">
+                        Historical India
+                    </option>
+
+                </select>
+
+            </div>
+
+
+            <!-- Number of travellers -->
+            <div class="form-group">
+
+                <label for="travellers">
+                    Number of Travellers
+                </label>
+
+                <input
+                    type="number"
+                    id="travellers"
+                    name="travellers"
+                    min="1"
+                    max="20"
+                    value="1"
+                    required
+                >
+
+            </div>
+
+
+            <!-- Travel type -->
+            <div class="form-group">
+
+                <label for="travel-type">
+                    Travel Type
+                </label>
+
+                <select
+                    id="travel-type"
+                    name="travel-type"
+                >
+
+                    <option value="family">
+                        Family
+                    </option>
+
+                    <option value="friends">
+                        Friends
+                    </option>
+
+                    <option value="couple">
+                        Couple
+                    </option>
+
+                    <option value="solo">
+                        Solo
+                    </option>
+
+                </select>
+
+            </div>
+
+
+            <!-- Message -->
+            <div class="form-group">
+
+                <label for="message">
+                    Special Requirements
+                </label>
+
+                <textarea
+                    id="message"
+                    name="message"
+                    placeholder="Enter any special requirements..."
+                ></textarea>
+
+            </div>
+
+
+            <!-- Terms -->
+            <div class="form-group">
+
+                <label class="terms-label">
+
+                    <input
+                        type="checkbox"
+                        required
+                    >
+
+                    <span>I agree to the booking terms and conditions.</span>
+
+                </label>
+
+            </div>
+
+
+            <!-- Submit -->
+            <button
+                type="submit"
+                class="btn"
+            >
+                Submit Booking
+            </button>
+
+
+            <button
+                type="reset"
+                class="btn"
+            >
+                Reset
+            </button>
+
+        </form>
+
+    </main>
+
+
+    <footer>
+
+        <p>
+            &copy; 2026 WanderWorld Travels. All Rights Reserved.
+        </p>
+
+    </footer>
+
+</body>
+
+</html>

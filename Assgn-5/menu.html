@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signature Food Menu | Saffron &amp; Sage</title>
+    <meta name="description" content="Explore our artisan food menu: wood-fired pizzas, wagyu burgers, royal Indian biryanis, dim sum, desserts and craft beverages.">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Header & Navigation -->
+    <header class="site-header" id="mainHeader">
+        <div class="header-container">
+            <a href="index.html" class="brand-logo">
+                <span class="logo-icon"><i class="fa-solid fa-fire-burner"></i></span>
+                <span class="logo-text">Saffron <span>&</span> Sage</span>
+            </a>
+
+            <nav class="main-nav" id="mainNav">
+                <ul class="nav-links">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="menu.html" class="nav-link active">Menu</a></li>
+                    <li><a href="categories.html" class="nav-link">Categories</a></li>
+                    <li><a href="offers.html" class="nav-link">Offers</a></li>
+                    <li><a href="about.html" class="nav-link">About</a></li>
+                    <li><a href="chef.html" class="nav-link">Chef's Special</a></li>
+                    <li><a href="gallery.html" class="nav-link">Gallery</a></li>
+                </ul>
+            </nav>
+
+            <div class="header-actions">
+                <button class="cart-trigger-btn" id="headerCartBtn" aria-label="Open Shopping Cart">
+                    <i class="fa-solid fa-bag-shopping"></i>
+                    <span class="cart-badge" id="cartCountBadge">0</span>
+                </button>
+                <a href="offers.html" class="btn btn-secondary nav-cta">Deals</a>
+                <button class="hamburger-btn" id="hamburgerBtn" aria-label="Toggle Navigation Menu">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Page Hero -->
+        <section class="page-hero">
+            <div class="page-hero-container">
+                <div class="breadcrumb-trail">
+                    <a href="index.html">Home</a> <i class="fa-solid fa-chevron-right"></i> <span>Signature Food Menu</span>
+                </div>
+                <h1 class="section-title">Signature Food Menu</h1>
+                <p class="section-desc">
+                    Handcrafted artisanal delicacies cooked strictly to order with organic, sustainable ingredients.
+                </p>
+            </div>
+        </section>
+
+        <!-- Sticky Quick Filter & Search Bar (position: sticky) -->
+        <div class="sticky-filter-bar" id="stickyFilterBar">
+            <div class="sticky-filter-inner">
+                <!-- Integrated sleek search -->
+                <div class="menu-search-box">
+                    <i class="fa-solid fa-magnifying-glass search-icon"></i>
+                    <input type="text" id="menuSearchInput" placeholder="Search dishes..." autocomplete="off">
+                    <button type="button" class="clear-search-btn" id="clearSearchBtn"><i class="fa-solid fa-xmark"></i></button>
+                </div>
+
+                <div class="sticky-tags-scroll">
+                    <button class="sticky-tag active" data-filter="all">All Dishes</button>
+                    <button class="sticky-tag" data-filter="pizza">Pizza</button>
+                    <button class="sticky-tag" data-filter="burgers">Burgers</button>
+                    <button class="sticky-tag" data-filter="indian">Indian</button>
+                    <button class="sticky-tag" data-filter="chinese">Chinese</button>
+                    <button class="sticky-tag" data-filter="desserts">Desserts</button>
+                    <button class="sticky-tag" data-filter="beverages">Beverages</button>
+                </div>
+                <div class="active-items-counter" id="activeItemsCount">Showing 12 items</div>
+            </div>
+        </div>
+
+        <!-- Food Menu Section (CSS Grid) -->
+        <section class="food-menu-section" id="food-menu">
+            <div class="section-container">
+
+                <!-- CSS Grid Menu Container -->
+                <div class="menu-grid-container" id="menuGrid">
+
+                    <!-- Item 1: FEATURED SPAN ITEM (Spanning 2 columns on desktop via grid-column) -->
+                    <div class="menu-card featured-span-card" data-category="pizza" data-title="Truffle Wild Mushroom Margherita">
+                        <div class="menu-card-img-wrap">
+                            <img src="https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&w=1000&q=80" alt="Truffle Margherita Pizza" class="menu-card-img" loading="lazy">
+                            <span class="badge badge-featured"><i class="fa-solid fa-crown"></i> Chef's Signature</span>
+                            <span class="badge badge-discount"><i class="fa-solid fa-tag"></i> 25% OFF</span>
+                        </div>
+                        <div class="menu-card-content">
+                            <div class="menu-card-meta">
+                                <span class="cuisine-tag"><i class="fa-solid fa-pizza-slice"></i> Artisan Pizza</span>
+                                <span class="rating-pill"><i class="fa-solid fa-star"></i> 4.9 (420)</span>
+                            </div>
+                            <h3 class="menu-item-name">Truffle Wild Mushroom Margherita</h3>
+                            <div class="menu-item-description overflow-auto-box">
+                                Slow-fermented 72-hour sourdough crust infused with black summer truffles, San Marzano D.O.P. organic tomatoes, buffalo mozzarella, roasted foraged chanterelles, and cold-pressed extra virgin olive oil finished with sweet fresh basil.
+                            </div>
+                            <div class="menu-card-footer">
+                                <div class="price-wrap">
+                                    <span class="current-price">$22.99</span>
+                                    <span class="original-price">$29.99</span>
+                                </div>
+                                <button class="btn btn-cart add-to-cart-btn" data-id="1" data-name="Truffle Wild Mushroom Margherita" data-price="22.99" data-img="https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&w=600&q=80">
+                                    <i class="fa-solid fa-plus"></i> Add to Cart
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Item 2: Wagyu Truffle Burger (Burgers) -->
+                    <div class="menu-card" data-category="burgers" data-title="Prime Wagyu Brioche Burger">
+                        <div class="menu-card-img-wrap">
+                            <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=800&q=80" alt="Prime Wagyu Burger" class="menu-card-img" loading="lazy">
+                            <span class="badge badge-bestseller"><i class="fa-solid fa-fire"></i> Best Seller</span>
+                        </div>
+                        <div class="menu-card-content">
+                            <div class="menu-card-meta">
+                                <span class="cuisine-tag"><i class="fa-solid fa-burger"></i> Gourmet Burger</span>
+                                <span class="rating-pill"><i class="fa-solid fa-star"></i> 4.8 (310)</span>
+                            </div>
+                            <h3 class="menu-item-name">Prime Wagyu Brioche Burger</h3>
+                            <div class="menu-item-description overflow-hidden-ellipsis">
+                                Double smash A5 Wagyu blend patty, aged Vermont cheddar, caramelized shallot jam, and house smoked aioli on a toasted artisanal brioche bun.
+                            </div>
+                            <div class="menu-card-footer">
+                                <div class="price-wrap">
+                                    <span class="current-price">$18.50</span>
+                                </div>
+                                <button class="btn btn-cart add-to-cart-btn" data-id="2" data-name="Prime Wagyu Brioche Burger" data-price="18.50" data-img="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=600&q=80">
+                                    <i class="fa-solid fa-plus"></i> Add to Cart
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Item 3: Royal Dum Biryani (Indian) -->
+                    <div class="menu-card" data-category="indian" data-title="Nawabi Royal Saffron Biryani">
+                        <div class="menu-card-img-wrap">
+                            <img src="https://images.unsplash.com/photo-1563379091339-03b21ab4a4f8?auto=format&fit=crop&w=800&q=80" alt="Nawabi Royal Saffron Biryani" class="menu-card-img" loading="lazy">
+                            <span class="badge badge-popular">Authentic</span>
+                        </div>
+                        <div class="menu-card-content">
+                            <div class="menu-card-meta">
+                                <span class="cuisine-tag"><i class="fa-solid fa-bowl-rice"></i> Royal Indian</span>
+                                <span class="rating-pill"><i class="fa-solid fa-star"></i> 4.9 (540)</span>
+                            </div>
+                            <h3 class="menu-item-name">Nawabi Royal Saffron Biryani</h3>
+                            <div class="menu-item-description overflow-hidden-ellipsis">
+                                Aged long-grain Basmati steamed sealed with organic pasture lamb, fragrant Kashmiri saffron, caramelized onions, mint, and house smoked mint raita.
+                            </div>
+                            <div class="menu-card-footer">
+                                <div class="price-wrap">
+                                    <span class="current-price">$21.00</span>
+                                </div>
+                                <button class="btn btn-cart add-to-cart-btn" data-id="3" data-name="Nawabi Royal Saffron Biryani" data-price="21.00" data-img="https://images.unsplash.com/photo-1563379091339-03b21ab4a4f8?auto=format&fit=crop&w=600&q=80">
+                                    <i class="fa-solid fa-plus"></i> Add to Cart
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Item 4: Artisanal Dim Sum Basket (Chinese) -->
+                    <div class="menu-card" data-category="chinese" data-title="Imperial Crystal Dim Sum Basket">
+                        <div class="menu-card-img-wrap">
+                            <img src="https://images.unsplash.com/photo-1541696432-82c6da8ce7bf?auto=format&fit=crop&w=800&q=80" alt="Imperial Crystal Dim Sum Basket" class="menu-card-img" loading="lazy">
+                            <span class="badge badge-discount"><i class="fa-solid fa-tag"></i> 15% OFF</span>
+                        </div>
+                        <div class="menu-card-content">
+                            <div class="menu-card-meta">
+                                <span class="cuisine-tag"><i class="fa-solid fa-utensils"></i> Wok &amp; Dim Sum</span>
+                                <span class="rating-pill"><i class="fa-solid fa-star"></i> 4.7 (198)</span>
+                            </div>
+                            <h3 class="menu-item-name">Imperial Crystal Dim Sum Basket</h3>
+                            <div class="menu-item-description overflow-hidden-ellipsis">
+                                Handcrafted translucent dumpling basket stuffed with tiger prawn, water chestnuts, scallions, and drizzled with artisan chili crisp oil.
+                            </div>
+                            <div class="menu-card-footer">
+                                <div class="price-wrap">
+                                    <span class="current-price">$16.20</span>
+                                    <span class="original-price">$19.00</span>
+                                </div>
+                                <button class="btn btn-cart add-to-cart-btn" data-id="4" data-name="Imperial Crystal Dim Sum Basket" data-price="16.20" data-img="https://images.unsplash.com/photo-1541696432-82c6da8ce7bf?auto=format&fit=crop&w=600&q=80">
+                                    <i class="fa-solid fa-plus"></i> Add to Cart
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Item 5: Butter Chicken Masala (Indian) -->
+                    <div class="menu-card" data-category="indian" data-title="Old Delhi Velvet Butter Chicken">
+                        <div class="menu-card-img-wrap">
+                            <img src="https://images.unsplash.com/photo-1588166524941-3bf61a9c41db?auto=format&fit=crop&w=800&q=80" alt="Butter Chicken Masala" class="menu-card-img" loading="lazy">
+                            <span class="badge badge-bestseller">House Classic</span>
+                        </div>
+                        <div class="menu-card-content">
+                            <div class="menu-card-meta">
+                                <span class="cuisine-tag"><i class="fa-solid fa-bowl-rice"></i> Royal Indian</span>
+                                <span class="rating-pill"><i class="fa-solid fa-star"></i> 5.0 (680)</span>
+                            </div>
+                            <h3 class="menu-item-name">Old Delhi Velvet Butter Chicken</h3>
+                            <div class="menu-item-description overflow-hidden-ellipsis">
+                                Clay oven roasted tender chicken simmered in an indulgent sun-ripened tomato, butter, and cashew gravy infused with kasoori methi.
+                            </div>
+                            <div class="menu-card-footer">
+                                <div class="price-wrap">
+                                    <span class="current-price">$19.99</span>
+                                </div>
+                                <button class="btn btn-cart add-to-cart-btn" data-id="5" data-name="Old Delhi Velvet Butter Chicken" data-price="19.99" data-img="https://images.unsplash.com/photo-1588166524941-3bf61a9c41db?auto=format&fit=crop&w=600&q=80">
+                                    <i class="fa-solid fa-plus"></i> Add to Cart
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Item 6: Molten Lava Cake (Desserts) -->
+                    <div class="menu-card" data-category="desserts" data-title="Valrhona Molten Chocolate Dome">
+                        <div class="menu-card-img-wrap">
+                            <img src="https://images.unsplash.com/photo-1606313564200-e75d5e30476c?auto=format&fit=crop&w=800&q=80" alt="Molten Chocolate Cake" class="menu-card-img" loading="lazy">
+                            <span class="badge badge-sweet">Sweet Treat</span>
+                        </div>
+                        <div class="menu-card-content">
+                            <div class="menu-card-meta">
+                                <span class="cuisine-tag"><i class="fa-solid fa-cake-candles"></i> Pâtisserie</span>
+                                <span class="rating-pill"><i class="fa-solid fa-star"></i> 4.9 (340)</span>
+                            </div>
+                            <h3 class="menu-item-name">Valrhona Molten Chocolate Dome</h3>
+                            <div class="menu-item-description overflow-hidden-ellipsis">
+                                70% dark French Valrhona chocolate warm cake with a rich flowing center, Madagascar vanilla bean gelato, and raspberry coulis.
+                            </div>
+                            <div class="menu-card-footer">
+                                <div class="price-wrap">
+                                    <span class="current-price">$13.50</span>
+                                </div>
+                                <button class="btn btn-cart add-to-cart-btn" data-id="6" data-name="Valrhona Molten Chocolate Dome" data-price="13.50" data-img="https://images.unsplash.com/photo-1606313564200-e75d5e30476c?auto=format&fit=crop&w=600&q=80">
+                                    <i class="fa-solid fa-plus"></i> Add to Cart
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Item 7: Spicy Dragon Dan Dan Noodles (Chinese) -->
+                    <div class="menu-card" data-category="chinese" data-title="Spicy Szechuan Dan Dan Noodles">
+                        <div class="menu-card-img-wrap">
+                            <img src="https://images.unsplash.com/photo-1552611052-33e04de081de?auto=format&fit=crop&w=800&q=80" alt="Szechuan Dan Dan Noodles" class="menu-card-img" loading="lazy">
+                            <span class="badge badge-spicy"><i class="fa-solid fa-pepper-hot"></i> Spicy</span>
+                        </div>
+                        <div class="menu-card-content">
+                            <div class="menu-card-meta">
+                                <span class="cuisine-tag"><i class="fa-solid fa-utensils"></i> Wok &amp; Chinese</span>
+                                <span class="rating-pill"><i class="fa-solid fa-star"></i> 4.8 (215)</span>
+                            </div>
+                            <h3 class="menu-item-name">Spicy Szechuan Dan Dan Noodles</h3>
+                            <div class="menu-item-description overflow-hidden-ellipsis">
+                                Springy wheat noodles in roasted sesame broth topped with crispy minced pork, pickled mustard greens, and toasted Szechuan peppercorn chili oil.
+                            </div>
+                            <div class="menu-card-footer">
+                                <div class="price-wrap">
+                                    <span class="current-price">$17.00</span>
+                                </div>
+                                <button class="btn btn-cart add-to-cart-btn" data-id="7" data-name="Spicy Szechuan Dan Dan Noodles" data-price="17.00" data-img="https://images.unsplash.com/photo-1552611052-33e04de081de?auto=format&fit=crop&w=600&q=80">
+                                    <i class="fa-solid fa-plus"></i> Add to Cart
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Item 8: Smoked Pepperoni Pizza (Pizza) -->
+                    <div class="menu-card" data-category="pizza" data-title="Smoked Pepperoni & Hot Honey">
+                        <div class="menu-card-img-wrap">
+                            <img src="https://images.unsplash.com/photo-1534308983496-4fabb1a015ee?auto=format&fit=crop&w=800&q=80" alt="Pepperoni Hot Honey Pizza" class="menu-card-img" loading="lazy">
+                            <span class="badge badge-popular">Trending</span>
+                        </div>
+                        <div class="menu-card-content">
+                            <div class="menu-card-meta">
+                                <span class="cuisine-tag"><i class="fa-solid fa-pizza-slice"></i> Artisan Pizza</span>
+                                <span class="rating-pill"><i class="fa-solid fa-star"></i> 4.9 (480)</span>
+                            </div>
+                            <h3 class="menu-item-name">Smoked Pepperoni &amp; Hot Honey</h3>
+                            <div class="menu-item-description overflow-hidden-ellipsis">
+                                Crispy cup-and-char smoked pepperoni, whole milk mozzarella, spicy Calabrian chili honey drizzle, and fresh wild oregano on charred crust.
+                            </div>
+                            <div class="menu-card-footer">
+                                <div class="price-wrap">
+                                    <span class="current-price">$20.50</span>
+                                </div>
+                                <button class="btn btn-cart add-to-cart-btn" data-id="8" data-name="Smoked Pepperoni & Hot Honey" data-price="20.50" data-img="https://images.unsplash.com/photo-1534308983496-4fabb1a015ee?auto=format&fit=crop&w=600&q=80">
+                                    <i class="fa-solid fa-plus"></i> Add to Cart
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Item 9: Yuzu Spritzer (Beverages) -->
+                    <div class="menu-card" data-category="beverages" data-title="Sparkling Yuzu Passion Spritzer">
+                        <div class="menu-card-img-wrap">
+                            <img src="https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd?auto=format&fit=crop&w=800&q=80" alt="Sparkling Yuzu Beverage" class="menu-card-img" loading="lazy">
+                            <span class="badge badge-refresh"><i class="fa-solid fa-snowflake"></i> Chilled</span>
+                        </div>
+                        <div class="menu-card-content">
+                            <div class="menu-card-meta">
+                                <span class="cuisine-tag"><i class="fa-solid fa-martini-glass-citrus"></i> Craft Beverage</span>
+                                <span class="rating-pill"><i class="fa-solid fa-star"></i> 4.8 (175)</span>
+                            </div>
+                            <h3 class="menu-item-name">Sparkling Yuzu Passion Spritzer</h3>
+                            <div class="menu-item-description overflow-hidden-ellipsis">
+                                Japanese citrus yuzu extract, fresh Ecuadorian passionfruit pulp, sparkling alkaline mineral soda, crushed mint, and agave nectar.
+                            </div>
+                            <div class="menu-card-footer">
+                                <div class="price-wrap">
+                                    <span class="current-price">$7.50</span>
+                                </div>
+                                <button class="btn btn-cart add-to-cart-btn" data-id="9" data-name="Sparkling Yuzu Passion Spritzer" data-price="7.50" data-img="https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd?auto=format&fit=crop&w=600&q=80">
+                                    <i class="fa-solid fa-plus"></i> Add to Cart
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Item 10: Crispy Gochujang Burger (Burgers) -->
+                    <div class="menu-card" data-category="burgers" data-title="Crispy Seoul Gochujang Burger">
+                        <div class="menu-card-img-wrap">
+                            <img src="https://images.unsplash.com/photo-1550547660-d9450f859349?auto=format&fit=crop&w=800&q=80" alt="Crispy Seoul Chicken Burger" class="menu-card-img" loading="lazy">
+                            <span class="badge badge-spicy">Hot &amp; Crunchy</span>
+                        </div>
+                        <div class="menu-card-content">
+                            <div class="menu-card-meta">
+                                <span class="cuisine-tag"><i class="fa-solid fa-burger"></i> Gourmet Burger</span>
+                                <span class="rating-pill"><i class="fa-solid fa-star"></i> 4.9 (385)</span>
+                            </div>
+                            <h3 class="menu-item-name">Crispy Seoul Gochujang Burger</h3>
+                            <div class="menu-item-description overflow-hidden-ellipsis">
+                                Double-fried organic chicken thigh tossed in sticky honey gochujang glaze, kimchi slaw, pickled daikon, and kewpie mayo on toasted sesame bun.
+                            </div>
+                            <div class="menu-card-footer">
+                                <div class="price-wrap">
+                                    <span class="current-price">$16.75</span>
+                                </div>
+                                <button class="btn btn-cart add-to-cart-btn" data-id="10" data-name="Crispy Seoul Gochujang Burger" data-price="16.75" data-img="https://images.unsplash.com/photo-1550547660-d9450f859349?auto=format&fit=crop&w=600&q=80">
+                                    <i class="fa-solid fa-plus"></i> Add to Cart
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Item 11: Espresso Tiramisu (Desserts) -->
+                    <div class="menu-card" data-category="desserts" data-title="Venetian Espresso Tiramisu">
+                        <div class="menu-card-img-wrap">
+                            <img src="https://images.unsplash.com/photo-1571877227200-a0d98ea607e9?auto=format&fit=crop&w=800&q=80" alt="Venetian Espresso Tiramisu" class="menu-card-img" loading="lazy">
+                            <span class="badge badge-sweet">Italian Classic</span>
+                        </div>
+                        <div class="menu-card-content">
+                            <div class="menu-card-meta">
+                                <span class="cuisine-tag"><i class="fa-solid fa-cake-candles"></i> Pâtisserie</span>
+                                <span class="rating-pill"><i class="fa-solid fa-star"></i> 5.0 (510)</span>
+                            </div>
+                            <h3 class="menu-item-name">Venetian Espresso Tiramisu</h3>
+                            <div class="menu-item-description overflow-hidden-ellipsis">
+                                House baked savoiardi ladyfingers soaked in single-origin Illy espresso and dark amaretto, layered with cloud-like mascarpone and cocoa powder.
+                            </div>
+                            <div class="menu-card-footer">
+                                <div class="price-wrap">
+                                    <span class="current-price">$12.00</span>
+                                </div>
+                                <button class="btn btn-cart add-to-cart-btn" data-id="11" data-name="Venetian Espresso Tiramisu" data-price="12.00" data-img="https://images.unsplash.com/photo-1571877227200-a0d98ea607e9?auto=format&fit=crop&w=600&q=80">
+                                    <i class="fa-solid fa-plus"></i> Add to Cart
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Item 12: Hibiscus Cold Brew (Beverages) -->
+                    <div class="menu-card" data-category="beverages" data-title="Hibiscus Blood Orange Nitro Brew">
+                        <div class="menu-card-img-wrap">
+                            <img src="https://images.unsplash.com/photo-1551024709-8f23befc6f87?auto=format&fit=crop&w=800&q=80" alt="Cold Brew Beverage" class="menu-card-img" loading="lazy">
+                            <span class="badge badge-refresh">Zero Sugar</span>
+                        </div>
+                        <div class="menu-card-content">
+                            <div class="menu-card-meta">
+                                <span class="cuisine-tag"><i class="fa-solid fa-martini-glass-citrus"></i> Craft Beverage</span>
+                                <span class="rating-pill"><i class="fa-solid fa-star"></i> 4.7 (95)</span>
+                            </div>
+                            <h3 class="menu-item-name">Hibiscus Blood Orange Nitro Brew</h3>
+                            <div class="menu-item-description overflow-hidden-ellipsis">
+                                16-hour slow steep Ethiopian cold brew infused with Egyptian wild hibiscus flowers, Sicilian blood orange zest, and creamy nitrogen infusion.
+                            </div>
+                            <div class="menu-card-footer">
+                                <div class="price-wrap">
+                                    <span class="current-price">$6.50</span>
+                                </div>
+                                <button class="btn btn-cart add-to-cart-btn" data-id="12" data-name="Hibiscus Blood Orange Nitro Brew" data-price="6.50" data-img="https://images.unsplash.com/photo-1551024709-8f23befc6f87?auto=format&fit=crop&w=600&q=80">
+                                    <i class="fa-solid fa-plus"></i> Add to Cart
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="no-results-message" id="noResultsMsg" style="display: none;">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <h3>No delicacies match your search</h3>
+                    <p>Try searching for a different dish name or reset filters.</p>
+                    <button class="btn btn-secondary" id="resetFilterBtn">Reset Search &amp; Filters</button>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <!-- Floating Actions -->
+    <div class="floating-actions-fixed">
+        <button class="fixed-action-btn back-to-top" id="backToTopBtn" title="Back to Top"><i class="fa-solid fa-arrow-up"></i></button>
+        <button class="fixed-action-btn floating-cart-btn" id="floatingCartBtn" title="View Order Cart">
+            <div class="cart-pulse-ring"></div>
+            <i class="fa-solid fa-cart-shopping"></i>
+            <span class="floating-badge" id="floatingCartCount">0</span>
+            <span class="floating-text-label">Order Now</span>
+        </button>
+    </div>
+
+    <!-- Cart Drawer -->
+    <div class="cart-overlay" id="cartOverlay"></div>
+    <aside class="cart-drawer" id="cartDrawer">
+        <div class="cart-drawer-header">
+            <div class="cart-title-wrap">
+                <i class="fa-solid fa-basket-shopping text-accent"></i>
+                <h3>Your Order Basket</h3>
+            </div>
+            <button class="close-cart-btn" id="closeCartBtn"><i class="fa-solid fa-xmark"></i></button>
+        </div>
+        <div class="cart-items-container" id="cartItemsContainer">
+            <div class="empty-cart-state" id="emptyCartState">
+                <i class="fa-solid fa-utensils"></i>
+                <p>Your basket is currently empty.</p>
+                <a href="#food-menu" class="btn btn-secondary btn-sm">Start Adding Dishes</a>
+            </div>
+        </div>
+        <div class="cart-drawer-footer">
+            <div class="cart-summary-line"><span>Subtotal</span><span id="cartSubtotal">$0.00</span></div>
+            <div class="cart-summary-line"><span>Estimated Tax (8%)</span><span id="cartTax">$0.00</span></div>
+            <div class="cart-summary-line delivery-fee"><span>Delivery Fee</span><span class="free-text">FREE</span></div>
+            <div class="cart-total-line"><span>Total Amount</span><span id="cartGrandTotal">$0.00</span></div>
+            <button class="btn btn-primary btn-block checkout-btn" id="checkoutBtn"><i class="fa-solid fa-lock"></i> Proceed to Checkout</button>
+        </div>
+    </aside>
+
+    <div class="toast-notification" id="toastNotification">
+        <div class="toast-icon"><i class="fa-solid fa-circle-check"></i></div>
+        <div class="toast-body">
+            <strong id="toastTitle">Notification</strong>
+            <span id="toastMessage">Done</span>
+        </div>
+    </div>
+
+    <footer class="site-footer">
+        <div class="section-container">
+            <div class="footer-bottom">
+                <p>&copy; 2026 Saffron &amp; Sage Artisan Kitchen. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        const urlParams = new URLSearchParams(window.location.search);
+        const catParam = urlParams.get('category');
+        if (catParam) {
+            setTimeout(() => {
+                const targetTag = document.querySelector(`.sticky-tag[data-filter="${catParam}"]`);
+                if (targetTag) targetTag.click();
+            }, 100);
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saffron &amp; Sage | Artisan Kitchen &amp; Gourmet Dining</title>
+    <meta name="description" content="Award-winning artisanal gastronomy delivered in perfection. Wood-fired pizzas, gourmet Wagyu burgers, royal Indian cuisine, artisan desserts and craft beverages.">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,500&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <!-- Core Stylesheet -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- ==========================================================================
+         HEADER AND NAVIGATION (Flexbox & CSS Display Properties)
+         Clean, spacious, uncrowded luxury restaurant navigation
+         ========================================================================== -->
+    <header class="site-header" id="mainHeader">
+        <div class="header-container">
+            <!-- Brand Logo -->
+            <a href="index.html" class="brand-logo" id="brandLogo">
+                <span class="logo-icon"><i class="fa-solid fa-fire-burner"></i></span>
+                <span class="logo-text">Saffron <span>&</span> Sage</span>
+            </a>
+
+            <!-- Streamlined Navigation Links -->
+            <nav class="main-nav" id="mainNav">
+                <ul class="nav-links">
+                    <li><a href="index.html" class="nav-link active">Home</a></li>
+                    <li><a href="menu.html" class="nav-link">Menu</a></li>
+                    <li><a href="categories.html" class="nav-link">Categories</a></li>
+                    <li><a href="offers.html" class="nav-link">Offers</a></li>
+                    <li><a href="about.html" class="nav-link">About</a></li>
+                    <li><a href="chef.html" class="nav-link">Chef's Special</a></li>
+                    <li><a href="gallery.html" class="nav-link">Gallery</a></li>
+                </ul>
+            </nav>
+
+            <!-- Header Actions: Cart Trigger & Order Now Button -->
+            <div class="header-actions">
+                <button class="cart-trigger-btn" id="headerCartBtn" aria-label="Open Shopping Cart">
+                    <i class="fa-solid fa-bag-shopping"></i>
+                    <span class="cart-badge" id="cartCountBadge">0</span>
+                </button>
+                <a href="menu.html" class="btn btn-primary nav-cta" id="orderNowHeaderBtn">
+                    <span>Order Now</span>
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+                <!-- Mobile Hamburger Button -->
+                <button class="hamburger-btn" id="hamburgerBtn" aria-label="Toggle Navigation Menu">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- ==========================================================================
+             BANNER SECTION (CSS Background, Positioning & Overflow)
+             ========================================================================== -->
+        <section class="banner-hero" id="hero">
+            <div class="banner-container">
+                <div class="banner-content">
+                    <div class="hero-badge">
+                        <i class="fa-solid fa-award"></i> Michelin Recommended &bull; 2026 Gold Standard
+                    </div>
+                    <h1 class="hero-title">
+                        Artisanal Gastronomy, <br>
+                        <span class="gradient-text">Delivered In Perfection.</span>
+                    </h1>
+                    <p class="hero-tagline">
+                        Handcrafted delicacies prepared by master culinary artisans using organic, farm-fresh harvest. 
+                        From wood-fired sourdough pizzas to slow-steamed saffron biryanis, savor excellence in every bite.
+                    </p>
+                    <div class="banner-cta-group">
+                        <a href="menu.html" class="btn btn-primary btn-lg" id="heroExploreMenuBtn">
+                            <i class="fa-solid fa-utensils"></i> Explore Full Menu
+                        </a>
+                        <a href="offers.html" class="btn btn-secondary btn-lg" id="heroOffersBtn">
+                            <i class="fa-solid fa-tag"></i> Today's Deals (Up to 40% Off)
+                        </a>
+                    </div>
+
+                    <!-- Live stats row -->
+                    <div class="hero-quick-stats">
+                        <div class="quick-stat-item">
+                            <span class="stat-number">4.9 <i class="fa-solid fa-star text-gold"></i></span>
+                            <span class="stat-label">15,000+ Verified Reviews</span>
+                        </div>
+                        <div class="stat-divider"></div>
+                        <div class="quick-stat-item">
+                            <span class="stat-number">25-35</span>
+                            <span class="stat-label">Mins Express Delivery</span>
+                        </div>
+                        <div class="stat-divider"></div>
+                        <div class="quick-stat-item">
+                            <span class="stat-number">100%</span>
+                            <span class="stat-label">Thermal Insulated Seal</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Floating Accent Badges (Positioning demonstration) -->
+                <div class="hero-floating-card card-top-right">
+                    <div class="floating-icon"><i class="fa-solid fa-clock-rotate-left"></i></div>
+                    <div class="floating-text">
+                        <strong>Lightning Fast</strong>
+                        <span>Thermal-insulated transit</span>
+                    </div>
+                </div>
+
+                <div class="hero-floating-card card-bottom-left">
+                    <div class="floating-icon flame"><i class="fa-solid fa-fire"></i></div>
+                    <div class="floating-text">
+                        <strong>Fresh &amp; Sizzling</strong>
+                        <span>Cooked strictly to order</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Signature Highlights -->
+        <section class="restaurant-info-section">
+            <div class="section-container">
+                <div class="section-header">
+                    <span class="section-subtitle">The Saffron &amp; Sage Experience</span>
+                    <h2 class="section-title">Crafted With Passion</h2>
+                    <p class="section-desc">
+                        Explore our world of artisanal cuisine, carefully curated menus, and dining promotions.
+                    </p>
+                </div>
+
+                <div class="info-grid">
+                    <!-- Card 1 -->
+                    <div class="info-card">
+                        <div class="info-card-header">
+                            <div class="info-icon-badge delivery-badge"><i class="fa-solid fa-utensils"></i></div>
+                        </div>
+                        <h3 class="info-card-title">Signature Food Menu</h3>
+                        <p class="info-card-text">Discover our curated dishes with wood-fired pizzas, Wagyu burgers, and decadent desserts, complete with real-time cart ordering.</p>
+                        <a href="menu.html" class="btn btn-primary btn-sm"><i class="fa-solid fa-arrow-right"></i> Open Menu</a>
+                    </div>
+
+                    <!-- Card 2 -->
+                    <div class="info-card">
+                        <div class="info-card-header">
+                            <div class="info-icon-badge cuisine-badge"><i class="fa-solid fa-layer-group"></i></div>
+                        </div>
+                        <h3 class="info-card-title">Food Categories</h3>
+                        <p class="info-card-text">Explore Italian pizzas, American smash burgers, Royal Indian curries, Szechuan dim sum, pastries, and botanical drinks.</p>
+                        <a href="categories.html" class="btn btn-gold btn-sm"><i class="fa-solid fa-arrow-right"></i> View Categories</a>
+                    </div>
+
+                    <!-- Card 3 -->
+                    <div class="info-card">
+                        <div class="info-card-header">
+                            <div class="info-icon-badge location-badge"><i class="fa-solid fa-tags"></i></div>
+                        </div>
+                        <h3 class="info-card-title">Exclusive Deals</h3>
+                        <p class="info-card-text">Indulge in our limited-time dining promotions, Buy-1-Get-1 pasta combos, and family bundle meal kits.</p>
+                        <a href="offers.html" class="btn btn-gold btn-sm"><i class="fa-solid fa-arrow-right"></i> View Offers</a>
+                    </div>
+
+                    <!-- Card 4 -->
+                    <div class="info-card">
+                        <div class="info-card-header">
+                            <div class="info-icon-badge rating-badge"><i class="fa-solid fa-circle-info"></i></div>
+                        </div>
+                        <h3 class="info-card-title">About Our Kitchen</h3>
+                        <p class="info-card-text">Learn about our Michelin-recommended dining philosophy, kitchen hygiene standards, delivery radius, and guest ratings.</p>
+                        <a href="about.html" class="btn btn-gold btn-sm"><i class="fa-solid fa-arrow-right"></i> Read About Us</a>
+                    </div>
+                </div>
+
+                <!-- Special Promo Callout -->
+                <div class="special-offer-banner" style="margin-top: 2rem;">
+                    <div class="offer-banner-content">
+                        <div class="offer-banner-icon">
+                            <i class="fa-solid fa-gift"></i>
+                        </div>
+                        <div class="offer-banner-details">
+                            <h4>Special Promotion: Flat 30% Off Welcome Voucher</h4>
+                            <p>Enjoy <strong>FLAT 30% OFF</strong> up to $15 on all first-time online orders using voucher code <code>SAFFRON30</code>. Valid on all signature entrees.</p>
+                        </div>
+                        <button class="btn btn-gold copy-code-btn" id="copyCodeBtn" data-code="SAFFRON30">
+                            <i class="fa-regular fa-copy"></i> Copy Code SAFFRON30
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Floating Actions (Fixed Positioning) -->
+    <div class="floating-actions-fixed" id="floatingActionsFixed">
+        <button class="fixed-action-btn back-to-top" id="backToTopBtn" title="Back to Top" aria-label="Back to Top">
+            <i class="fa-solid fa-arrow-up"></i>
+        </button>
+        <button class="fixed-action-btn floating-cart-btn" id="floatingCartBtn" title="View Order Cart" aria-label="View Shopping Cart">
+            <div class="cart-pulse-ring"></div>
+            <i class="fa-solid fa-cart-shopping"></i>
+            <span class="floating-badge" id="floatingCartCount">0</span>
+            <span class="floating-text-label">Order Now</span>
+        </button>
+    </div>
+
+    <!-- Shopping Cart Slide-out Drawer -->
+    <div class="cart-overlay" id="cartOverlay"></div>
+    <aside class="cart-drawer" id="cartDrawer" aria-hidden="true">
+        <div class="cart-drawer-header">
+            <div class="cart-title-wrap">
+                <i class="fa-solid fa-basket-shopping text-accent"></i>
+                <h3>Your Order Basket</h3>
+            </div>
+            <button class="close-cart-btn" id="closeCartBtn" aria-label="Close Shopping Cart">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+        </div>
+
+        <div class="cart-items-container" id="cartItemsContainer">
+            <div class="empty-cart-state" id="emptyCartState">
+                <i class="fa-solid fa-utensils"></i>
+                <p>Your basket is currently empty.</p>
+                <a href="menu.html" class="btn btn-secondary btn-sm" id="cartStartShoppingBtn">Start Adding Dishes</a>
+            </div>
+        </div>
+
+        <div class="cart-drawer-footer" id="cartDrawerFooter">
+            <div class="cart-summary-line">
+                <span>Subtotal</span>
+                <span id="cartSubtotal">$0.00</span>
+            </div>
+            <div class="cart-summary-line">
+                <span>Estimated Tax (8%)</span>
+                <span id="cartTax">$0.00</span>
+            </div>
+            <div class="cart-summary-line delivery-fee">
+                <span>Delivery Fee</span>
+                <span class="free-text">FREE</span>
+            </div>
+            <div class="cart-total-line">
+                <span>Total Amount</span>
+                <span id="cartGrandTotal">$0.00</span>
+            </div>
+            <button class="btn btn-primary btn-block checkout-btn" id="checkoutBtn">
+                <i class="fa-solid fa-lock"></i> Proceed to Checkout
+            </button>
+        </div>
+    </aside>
+
+    <!-- Toast Notification -->
+    <div class="toast-notification" id="toastNotification">
+        <div class="toast-icon"><i class="fa-solid fa-circle-check"></i></div>
+        <div class="toast-body">
+            <strong id="toastTitle">Notification</strong>
+            <span id="toastMessage">Item added to cart.</span>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="section-container">
+            <div class="footer-grid">
+                <div class="footer-col brand-col">
+                    <a href="index.html" class="brand-logo footer-logo">
+                        <span class="logo-icon"><i class="fa-solid fa-fire-burner"></i></span>
+                        <span class="logo-text">Saffron <span>&</span> Sage</span>
+                    </a>
+                    <p class="footer-about">
+                        Artisanal cuisine created with ethical farm sourcing, ancestral gastronomy, and uncompromising culinary passion.
+                    </p>
+                    <div class="footer-social-links">
+                        <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+                        <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-col">
+                    <h4 class="footer-heading">Explore</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="menu.html">Signature Menu</a></li>
+                        <li><a href="categories.html">Food Categories</a></li>
+                        <li><a href="offers.html">Special Offers</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4 class="footer-heading">Kitchen &amp; Story</h4>
+                    <ul class="footer-links">
+                        <li><a href="about.html">About Saffron &amp; Sage</a></li>
+                        <li><a href="chef.html">Chef's Special &amp; Heritage</a></li>
+                        <li><a href="gallery.html">Culinary Photo Gallery</a></li>
+                        <li><a href="about.html">Hours &amp; Location</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4 class="footer-heading">Operating Hours</h4>
+                    <div class="opening-hours">
+                        <p><strong>Monday – Friday:</strong> 11:00 AM – 11:30 PM</p>
+                        <p><strong>Saturday – Sunday:</strong> 10:00 AM – 1:00 AM</p>
+                        <p class="text-gold"><i class="fa-solid fa-truck-ramp-box"></i> Late Night Delivery Available</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 Saffron &amp; Sage Artisan Kitchen. All rights reserved.</p>
+                <div class="footer-academic-badge">
+                    <span>Artisanal Gastronomy &bull; Online Dining</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

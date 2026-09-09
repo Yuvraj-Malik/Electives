@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Artisan Food Gallery | Saffron &amp; Sage</title>
+    <meta name="description" content="A visual feast of our culinary creations with tailored borders, border-radius, and smooth hover zoom effects.">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Header & Navigation -->
+    <header class="site-header" id="mainHeader">
+        <div class="header-container">
+            <a href="index.html" class="brand-logo">
+                <span class="logo-icon"><i class="fa-solid fa-fire-burner"></i></span>
+                <span class="logo-text">Saffron <span>&</span> Sage</span>
+            </a>
+
+            <nav class="main-nav" id="mainNav">
+                <ul class="nav-links">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="menu.html" class="nav-link">Menu</a></li>
+                    <li><a href="categories.html" class="nav-link">Categories</a></li>
+                    <li><a href="offers.html" class="nav-link">Offers</a></li>
+                    <li><a href="about.html" class="nav-link">About</a></li>
+                    <li><a href="chef.html" class="nav-link">Chef's Special</a></li>
+                    <li><a href="gallery.html" class="nav-link active">Gallery</a></li>
+                </ul>
+            </nav>
+
+            <div class="header-actions">
+                <button class="cart-trigger-btn" id="headerCartBtn" aria-label="Open Shopping Cart">
+                    <i class="fa-solid fa-bag-shopping"></i>
+                    <span class="cart-badge" id="cartCountBadge">0</span>
+                </button>
+                <a href="menu.html" class="btn btn-primary nav-cta">Order Now</a>
+                <button class="hamburger-btn" id="hamburgerBtn" aria-label="Toggle Navigation Menu">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Page Hero -->
+        <section class="page-hero">
+            <div class="page-hero-container">
+                <div class="breadcrumb-trail">
+                    <a href="index.html">Home</a> <i class="fa-solid fa-chevron-right"></i> <span>Artisan Gallery</span>
+                </div>
+                <h1 class="section-title">Artisan Culinary Gallery</h1>
+                <p class="section-desc">
+                    A visual celebration of our handcrafted entrees, desserts, wood-fired hearth creations, and craft mixology.
+                </p>
+            </div>
+        </section>
+
+        <!-- Food Gallery Section (CSS Grid, Borders, Border-Radius & Hover Effects) -->
+        <section class="gallery-section" id="food-gallery" style="padding-top: 4rem;">
+            <div class="section-container">
+
+                <!-- CSS Grid Gallery Container -->
+                <div class="gallery-grid" id="galleryGrid">
+                    
+                    <!-- Gallery Item 1 (Tall Card: grid-row: span 2) -->
+                    <div class="gallery-card card-tall">
+                        <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=800&q=80" alt="Fresh Superfood Salad" class="gallery-img">
+                        <div class="gallery-overlay">
+                            <span class="gallery-category">Organic Garden</span>
+                            <h3 class="gallery-title">Mediterranean Quinoa Bowl</h3>
+                            <span class="gallery-zoom-icon"><i class="fa-solid fa-expand"></i></span>
+                        </div>
+                    </div>
+
+                    <!-- Gallery Item 2 -->
+                    <div class="gallery-card">
+                        <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?auto=format&fit=crop&w=800&q=80" alt="Wood-fired Gourmet Pizza" class="gallery-img">
+                        <div class="gallery-overlay">
+                            <span class="gallery-category">Wood Fired</span>
+                            <h3 class="gallery-title">Neapolitan Burrata Pizza</h3>
+                            <span class="gallery-zoom-icon"><i class="fa-solid fa-expand"></i></span>
+                        </div>
+                    </div>
+
+                    <!-- Gallery Item 3 (Wide Card: grid-column: span 2) -->
+                    <div class="gallery-card card-wide">
+                        <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=1200&q=80" alt="Gourmet Platter Feast" class="gallery-img">
+                        <div class="gallery-overlay">
+                            <span class="gallery-category">Chef's Table</span>
+                            <h3 class="gallery-title">Banqueting Spread &amp; Steaks</h3>
+                            <span class="gallery-zoom-icon"><i class="fa-solid fa-expand"></i></span>
+                        </div>
+                    </div>
+
+                    <!-- Gallery Item 4 -->
+                    <div class="gallery-card">
+                        <img src="https://images.unsplash.com/photo-1551024709-8f23befc6f87?auto=format&fit=crop&w=800&q=80" alt="Craft Mixology Cocktail" class="gallery-img">
+                        <div class="gallery-overlay">
+                            <span class="gallery-category">Mixology</span>
+                            <h3 class="gallery-title">Smoked Berry Bourbon Elixir</h3>
+                            <span class="gallery-zoom-icon"><i class="fa-solid fa-expand"></i></span>
+                        </div>
+                    </div>
+
+                    <!-- Gallery Item 5 (Tall Card: grid-row: span 2) -->
+                    <div class="gallery-card card-tall">
+                        <img src="https://images.unsplash.com/photo-1563729784474-d77dbb933a9e?auto=format&fit=crop&w=800&q=80" alt="Artisan Pastry" class="gallery-img">
+                        <div class="gallery-overlay">
+                            <span class="gallery-category">Pâtisserie</span>
+                            <h3 class="gallery-title">Raspberry Choux Cream Puffs</h3>
+                            <span class="gallery-zoom-icon"><i class="fa-solid fa-expand"></i></span>
+                        </div>
+                    </div>
+
+                    <!-- Gallery Item 6 -->
+                    <div class="gallery-card">
+                        <img src="https://images.unsplash.com/photo-1567620905732-2d1ec7ab7445?auto=format&fit=crop&w=800&q=80" alt="Fluffy Souffle Pancakes" class="gallery-img">
+                        <div class="gallery-overlay">
+                            <span class="gallery-category">Sweet Brunch</span>
+                            <h3 class="gallery-title">Japanese Fluffy Maple Soufflé</h3>
+                            <span class="gallery-zoom-icon"><i class="fa-solid fa-expand"></i></span>
+                        </div>
+                    </div>
+
+                    <!-- Gallery Item 7 -->
+                    <div class="gallery-card">
+                        <img src="https://images.unsplash.com/photo-1550547660-d9450f859349?auto=format&fit=crop&w=800&q=80" alt="Gourmet Wagyu Burger" class="gallery-img">
+                        <div class="gallery-overlay">
+                            <span class="gallery-category">Gourmet Burgers</span>
+                            <h3 class="gallery-title">Double Smash Brioche Burger</h3>
+                            <span class="gallery-zoom-icon"><i class="fa-solid fa-expand"></i></span>
+                        </div>
+                    </div>
+
+                    <!-- Gallery Item 8 (Wide Card: grid-column: span 2) -->
+                    <div class="gallery-card card-wide">
+                        <img src="https://images.unsplash.com/photo-1563379091339-03b21ab4a4f8?auto=format&fit=crop&w=1200&q=80" alt="Royal Awadhi Biryani" class="gallery-img">
+                        <div class="gallery-overlay">
+                            <span class="gallery-category">Royal Awadh</span>
+                            <h3 class="gallery-title">Slow Dum Saffron Biryani Feast</h3>
+                            <span class="gallery-zoom-icon"><i class="fa-solid fa-expand"></i></span>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <!-- Floating Actions -->
+    <div class="floating-actions-fixed">
+        <button class="fixed-action-btn back-to-top" id="backToTopBtn" title="Back to Top"><i class="fa-solid fa-arrow-up"></i></button>
+        <button class="fixed-action-btn floating-cart-btn" id="floatingCartBtn" title="View Order Cart">
+            <div class="cart-pulse-ring"></div>
+            <i class="fa-solid fa-cart-shopping"></i>
+            <span class="floating-badge" id="floatingCartCount">0</span>
+            <span class="floating-text-label">Order Now</span>
+        </button>
+    </div>
+
+    <!-- Cart Drawer -->
+    <div class="cart-overlay" id="cartOverlay"></div>
+    <aside class="cart-drawer" id="cartDrawer">
+        <div class="cart-drawer-header">
+            <div class="cart-title-wrap">
+                <i class="fa-solid fa-basket-shopping text-accent"></i>
+                <h3>Your Order Basket</h3>
+            </div>
+            <button class="close-cart-btn" id="closeCartBtn"><i class="fa-solid fa-xmark"></i></button>
+        </div>
+        <div class="cart-items-container" id="cartItemsContainer">
+            <div class="empty-cart-state" id="emptyCartState">
+                <i class="fa-solid fa-utensils"></i>
+                <p>Your basket is currently empty.</p>
+                <a href="menu.html" class="btn btn-secondary btn-sm">Start Adding Dishes</a>
+            </div>
+        </div>
+        <div class="cart-drawer-footer">
+            <div class="cart-summary-line"><span>Subtotal</span><span id="cartSubtotal">$0.00</span></div>
+            <div class="cart-summary-line"><span>Estimated Tax (8%)</span><span id="cartTax">$0.00</span></div>
+            <div class="cart-summary-line delivery-fee"><span>Delivery Fee</span><span class="free-text">FREE</span></div>
+            <div class="cart-total-line"><span>Total Amount</span><span id="cartGrandTotal">$0.00</span></div>
+            <button class="btn btn-primary btn-block checkout-btn" id="checkoutBtn"><i class="fa-solid fa-lock"></i> Proceed to Checkout</button>
+        </div>
+    </aside>
+
+    <div class="toast-notification" id="toastNotification">
+        <div class="toast-icon"><i class="fa-solid fa-circle-check"></i></div>
+        <div class="toast-body">
+            <strong id="toastTitle">Notification</strong>
+            <span id="toastMessage">Done</span>
+        </div>
+    </div>
+
+    <footer class="site-footer">
+        <div class="section-container">
+            <div class="footer-bottom">
+                <p>&copy; 2026 Saffron &amp; Sage Artisan Kitchen. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

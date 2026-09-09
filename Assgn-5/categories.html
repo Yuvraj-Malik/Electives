@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Categories | Saffron &amp; Sage</title>
+    <meta name="description" content="Explore artisan food categories: Pizza, Burgers, Indian, Chinese, Desserts, and Beverages.">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Header & Navigation -->
+    <header class="site-header" id="mainHeader">
+        <div class="header-container">
+            <a href="index.html" class="brand-logo">
+                <span class="logo-icon"><i class="fa-solid fa-fire-burner"></i></span>
+                <span class="logo-text">Saffron <span>&</span> Sage</span>
+            </a>
+
+            <nav class="main-nav" id="mainNav">
+                <ul class="nav-links">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="menu.html" class="nav-link">Menu</a></li>
+                    <li><a href="categories.html" class="nav-link active">Categories</a></li>
+                    <li><a href="offers.html" class="nav-link">Offers</a></li>
+                    <li><a href="about.html" class="nav-link">About</a></li>
+                    <li><a href="chef.html" class="nav-link">Chef's Special</a></li>
+                    <li><a href="gallery.html" class="nav-link">Gallery</a></li>
+                </ul>
+            </nav>
+
+            <div class="header-actions">
+                <button class="cart-trigger-btn" id="headerCartBtn" aria-label="Open Shopping Cart">
+                    <i class="fa-solid fa-bag-shopping"></i>
+                    <span class="cart-badge" id="cartCountBadge">0</span>
+                </button>
+                <a href="menu.html" class="btn btn-primary nav-cta">Order Now</a>
+                <button class="hamburger-btn" id="hamburgerBtn" aria-label="Toggle Navigation Menu">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Page Hero -->
+        <section class="page-hero">
+            <div class="page-hero-container">
+                <div class="breadcrumb-trail">
+                    <a href="index.html">Home</a> <i class="fa-solid fa-chevron-right"></i> <span>Food Categories</span>
+                </div>
+                <h1 class="section-title">Artisan Culinary Categories</h1>
+                <p class="section-desc">
+                    Discover handcrafted dishes across six distinct world traditions, curated with farm-fresh ingredients.
+                </p>
+            </div>
+        </section>
+
+        <!-- Categories Section (Flexbox) -->
+        <section class="categories-section" style="padding-top: 4rem;">
+            <div class="section-container">
+
+                <!-- 6 REQUIRED CATEGORIES IN FLEXBOX -->
+                <div class="categories-flex-container" id="categoriesFlexContainer">
+                    
+                    <!-- 1. Pizza -->
+                    <a href="menu.html?category=pizza" class="category-card" data-category="pizza">
+                        <div class="cat-icon-wrap"><i class="fa-solid fa-pizza-slice"></i></div>
+                        <span class="cat-title">Artisan Pizza</span>
+                        <span class="cat-count">Wood-fired Sourdough</span>
+                    </a>
+
+                    <!-- 2. Burgers -->
+                    <a href="menu.html?category=burgers" class="category-card" data-category="burgers">
+                        <div class="cat-icon-wrap"><i class="fa-solid fa-burger"></i></div>
+                        <span class="cat-title">Gourmet Burgers</span>
+                        <span class="cat-count">Brioche &amp; Wagyu</span>
+                    </a>
+
+                    <!-- 3. Indian -->
+                    <a href="menu.html?category=indian" class="category-card" data-category="indian">
+                        <div class="cat-icon-wrap"><i class="fa-solid fa-bowl-rice"></i></div>
+                        <span class="cat-title">Royal Indian</span>
+                        <span class="cat-count">Slow Dum &amp; Tandoor</span>
+                    </a>
+
+                    <!-- 4. Chinese -->
+                    <a href="menu.html?category=chinese" class="category-card" data-category="chinese">
+                        <div class="cat-icon-wrap"><i class="fa-solid fa-utensils"></i></div>
+                        <span class="cat-title">Wok &amp; Chinese</span>
+                        <span class="cat-count">Dim Sum &amp; Noodles</span>
+                    </a>
+
+                    <!-- 5. Desserts -->
+                    <a href="menu.html?category=desserts" class="category-card" data-category="desserts">
+                        <div class="cat-icon-wrap"><i class="fa-solid fa-cake-candles"></i></div>
+                        <span class="cat-title">Decadent Desserts</span>
+                        <span class="cat-count">French Pâtisserie</span>
+                    </a>
+
+                    <!-- 6. Beverages -->
+                    <a href="menu.html?category=beverages" class="category-card" data-category="beverages">
+                        <div class="cat-icon-wrap"><i class="fa-solid fa-martini-glass-citrus"></i></div>
+                        <span class="cat-title">Craft Beverages</span>
+                        <span class="cat-count">Cold-pressed &amp; Teas</span>
+                    </a>
+                </div>
+
+                <!-- Deep Dive Showcases -->
+                <div style="margin-top: 4.5rem;">
+                    <div class="section-header">
+                        <span class="section-subtitle">Culinary Highlights</span>
+                        <h2 class="section-title">Explore Our Specialties</h2>
+                    </div>
+
+                    <div class="info-grid">
+                        <div class="info-card">
+                            <div class="info-card-header">
+                                <div class="info-icon-badge rating-badge"><i class="fa-solid fa-pizza-slice"></i></div>
+                            </div>
+                            <h3 class="info-card-title">Artisan Pizza</h3>
+                            <p class="info-card-text">72-hour cold fermented levain dough baked at 900°F in imported oak wood ovens with buffalo mozzarella and San Marzano tomatoes.</p>
+                            <a href="menu.html?category=pizza" class="btn btn-gold btn-sm">Explore Pizzas</a>
+                        </div>
+
+                        <div class="info-card">
+                            <div class="info-card-header">
+                                <div class="info-icon-badge cuisine-badge"><i class="fa-solid fa-burger"></i></div>
+                            </div>
+                            <h3 class="info-card-title">Gourmet Burgers</h3>
+                            <p class="info-card-text">Dry-aged full-blood Wagyu and organic buttermilk-fried chicken breasts nestled in glazed artisanal French brioche buns.</p>
+                            <a href="menu.html?category=burgers" class="btn btn-gold btn-sm">Explore Burgers</a>
+                        </div>
+
+                        <div class="info-card">
+                            <div class="info-card-header">
+                                <div class="info-icon-badge delivery-badge"><i class="fa-solid fa-bowl-rice"></i></div>
+                            </div>
+                            <h3 class="info-card-title">Royal Indian</h3>
+                            <p class="info-card-text">Nawabi royal saffron biryanis and clay-oven charred butter chicken cooked with hand-ground spices and slow dum steam.</p>
+                            <a href="menu.html?category=indian" class="btn btn-gold btn-sm">Explore Indian</a>
+                        </div>
+
+                        <div class="info-card">
+                            <div class="info-card-header">
+                                <div class="info-icon-badge location-badge"><i class="fa-solid fa-utensils"></i></div>
+                            </div>
+                            <h3 class="info-card-title">Wok &amp; Chinese</h3>
+                            <p class="info-card-text">Hand-pinched translucent dim sum baskets and Szechuan peppercorn hand-pulled noodles with intense wok hei sear.</p>
+                            <a href="menu.html?category=chinese" class="btn btn-gold btn-sm">Explore Chinese</a>
+                        </div>
+
+                        <div class="info-card">
+                            <div class="info-card-header">
+                                <div class="info-icon-badge rating-badge"><i class="fa-solid fa-cake-candles"></i></div>
+                            </div>
+                            <h3 class="info-card-title">Decadent Desserts</h3>
+                            <p class="info-card-text">French Valrhona chocolate molten cakes and traditional Venetian tiramisu crafted daily by our pastry chefs.</p>
+                            <a href="menu.html?category=desserts" class="btn btn-gold btn-sm">Explore Desserts</a>
+                        </div>
+
+                        <div class="info-card">
+                            <div class="info-card-header">
+                                <div class="info-icon-badge delivery-badge"><i class="fa-solid fa-martini-glass-citrus"></i></div>
+                            </div>
+                            <h3 class="info-card-title">Craft Beverages</h3>
+                            <p class="info-card-text">Cold-pressed juices, nitro cold brews, and sparkling botanical spritzers made with wild flowers and organic fruits.</p>
+                            <a href="menu.html?category=beverages" class="btn btn-gold btn-sm">Explore Drinks</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <!-- Floating Cart & Back to Top -->
+    <div class="floating-actions-fixed">
+        <button class="fixed-action-btn back-to-top" id="backToTopBtn" title="Back to Top"><i class="fa-solid fa-arrow-up"></i></button>
+        <button class="fixed-action-btn floating-cart-btn" id="floatingCartBtn" title="View Order Cart">
+            <div class="cart-pulse-ring"></div>
+            <i class="fa-solid fa-cart-shopping"></i>
+            <span class="floating-badge" id="floatingCartCount">0</span>
+            <span class="floating-text-label">Order Now</span>
+        </button>
+    </div>
+
+    <!-- Cart Drawer -->
+    <div class="cart-overlay" id="cartOverlay"></div>
+    <aside class="cart-drawer" id="cartDrawer">
+        <div class="cart-drawer-header">
+            <div class="cart-title-wrap">
+                <i class="fa-solid fa-basket-shopping text-accent"></i>
+                <h3>Your Order Basket</h3>
+            </div>
+            <button class="close-cart-btn" id="closeCartBtn"><i class="fa-solid fa-xmark"></i></button>
+        </div>
+        <div class="cart-items-container" id="cartItemsContainer">
+            <div class="empty-cart-state" id="emptyCartState">
+                <i class="fa-solid fa-utensils"></i>
+                <p>Your basket is currently empty.</p>
+                <a href="menu.html" class="btn btn-secondary btn-sm">Start Adding Dishes</a>
+            </div>
+        </div>
+        <div class="cart-drawer-footer">
+            <div class="cart-summary-line"><span>Subtotal</span><span id="cartSubtotal">$0.00</span></div>
+            <div class="cart-summary-line"><span>Estimated Tax (8%)</span><span id="cartTax">$0.00</span></div>
+            <div class="cart-summary-line delivery-fee"><span>Delivery Fee</span><span class="free-text">FREE</span></div>
+            <div class="cart-total-line"><span>Total Amount</span><span id="cartGrandTotal">$0.00</span></div>
+            <button class="btn btn-primary btn-block checkout-btn" id="checkoutBtn"><i class="fa-solid fa-lock"></i> Proceed to Checkout</button>
+        </div>
+    </aside>
+
+    <div class="toast-notification" id="toastNotification">
+        <div class="toast-icon"><i class="fa-solid fa-circle-check"></i></div>
+        <div class="toast-body">
+            <strong id="toastTitle">Notification</strong>
+            <span id="toastMessage">Done</span>
+        </div>
+    </div>
+
+    <footer class="site-footer">
+        <div class="section-container">
+            <div class="footer-bottom">
+                <p>&copy; 2026 Saffron &amp; Sage Artisan Kitchen. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

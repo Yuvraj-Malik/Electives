@@ -11,7 +11,11 @@
 
 document.addEventListener('DOMContentLoaded', () => {
     // --- State Management ---
-    let cart = JSON.parse(localStorage.getItem('saffron_cart')) || [];
+    let cart = JSON.parse(localStorage.getItem('saffron_cart_inr'));
+    if (!cart) {
+        localStorage.removeItem('saffron_cart');
+        cart = [];
+    }
 
     // --- DOM Elements ---
     const mainHeader = document.getElementById('mainHeader');
@@ -130,7 +134,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function saveCart() {
-        localStorage.setItem('saffron_cart', JSON.stringify(cart));
+        localStorage.setItem('saffron_cart_inr', JSON.stringify(cart));
     }
 
     function updateCartUI() {
@@ -146,9 +150,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
         if (cart.length === 0) {
             if (emptyCartState) emptyCartState.style.display = 'flex';
-            if (cartSubtotal) cartSubtotal.textContent = '$0.00';
-            if (cartTax) cartTax.textContent = '$0.00';
-            if (cartGrandTotal) cartGrandTotal.textContent = '$0.00';
+            if (cartSubtotal) cartSubtotal.textContent = '₹0.00';
+            if (cartTax) cartTax.textContent = '₹0.00';
+            if (cartGrandTotal) cartGrandTotal.textContent = '₹0.00';
             return;
         }
 
@@ -164,7 +168,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 <img src="${item.img}" alt="${item.name}" class="cart-item-img">
                 <div class="cart-item-info">
                     <h4 class="cart-item-title">${item.name}</h4>
-                    <span class="cart-item-price">$${(item.price * item.qty).toFixed(2)}</span>
+                    <span class="cart-item-price">₹${(item.price * item.qty).toFixed(2)}</span>
                 </div>
                 <div class="cart-item-qty">
                     <button class="qty-btn dec-qty" data-id="${item.id}" aria-label="Decrease quantity"><i class="fa-solid fa-minus"></i></button>
@@ -179,9 +183,9 @@ document.addEventListener('DOMContentLoaded', () => {
         const tax = subtotal * 0.08;
         const grandTotal = subtotal + tax;
 
-        if (cartSubtotal) cartSubtotal.textContent = `$${subtotal.toFixed(2)}`;
-        if (cartTax) cartTax.textContent = `$${tax.toFixed(2)}`;
-        if (cartGrandTotal) cartGrandTotal.textContent = `$${grandTotal.toFixed(2)}`;
+        if (cartSubtotal) cartSubtotal.textContent = `₹${subtotal.toFixed(2)}`;
+        if (cartTax) cartTax.textContent = `₹${tax.toFixed(2)}`;
+        if (cartGrandTotal) cartGrandTotal.textContent = `₹${grandTotal.toFixed(2)}`;
 
         // Attach quantity handlers
         cartItemsContainer.querySelectorAll('.inc-qty').forEach(btn => {

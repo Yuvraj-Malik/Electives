@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Practical - Assignment 6</title>
+    <!-- Google Fonts for crisp typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <!-- Main Header -->
+        <header class="main-header">
+            <span class="header-badge">Web Technology Practical</span>
+            <h1>JavaScript Operations</h1>
+            <p class="subtitle">Assignment 6 &bull; Interactive Demonstration of Core JavaScript, Arrays, Validation &amp; Objects</p>
+        </header>
+
+        <!-- Grid of Practical Operations -->
+        <main class="operations-grid">
+            
+            <!-- 1. Arithmetic Operations -->
+            <section class="card">
+                <div class="card-header">
+                    <div class="card-title-row">
+                        <h2><span class="step-num">1</span> Arithmetic Operations</h2>
+                        <span class="card-tag">Math &amp; Operators</span>
+                    </div>
+                    <p class="card-desc">Calculate sum, difference, product, and quotient of two numbers.</p>
+                </div>
+                <div class="card-body">
+                    <div class="input-row">
+                        <div class="form-group">
+                            <label for="num1">First Number</label>
+                            <input type="number" id="num1" placeholder="Enter first number">
+                        </div>
+                        <div class="form-group">
+                            <label for="num2">Second Number</label>
+                            <input type="number" id="num2" placeholder="Enter second number">
+                        </div>
+                    </div>
+                    <button class="btn-primary" onclick="arithmetic()">Calculate</button>
+                    <div class="terminal-wrapper">
+                        <div class="terminal-header">
+                            <div class="terminal-dots">
+                                <span class="dot-red"></span>
+                                <span class="dot-yellow"></span>
+                                <span class="dot-green"></span>
+                            </div>
+                            <span class="terminal-title">Console Output</span>
+                        </div>
+                        <p id="arithmeticResult" class="result-content"></p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 2. Array Operations -->
+            <section class="card">
+                <div class="card-header">
+                    <div class="card-title-row">
+                        <h2><span class="step-num">2</span> Array Operations</h2>
+                        <span class="card-tag">Sorting &amp; Search</span>
+                    </div>
+                    <p class="card-desc">Find minimum, maximum, and sort 5 numbers in ascending and descending order.</p>
+                </div>
+                <div class="card-body">
+                    <div class="form-group">
+                        <label for="numbers">Enter 5 Numbers (comma-separated)</label>
+                        <input type="text" id="numbers" placeholder="Enter 5 numbers separated by commas">
+                    </div>
+                    <div class="quick-chips">
+                        <span>Sample:</span>
+                        <button type="button" class="chip-btn" onclick="fillNumbers('45, 12, 89, 23, 7')">45, 12, 89, 23, 7</button>
+                        <button type="button" class="chip-btn" onclick="fillNumbers('90, 15, 33, 4, 62')">90, 15, 33, 4, 62</button>
+                    </div>
+                    <button class="btn-primary" onclick="arrayOperations()">Perform Operations</button>
+                    <div class="terminal-wrapper">
+                        <div class="terminal-header">
+                            <div class="terminal-dots">
+                                <span class="dot-red"></span>
+                                <span class="dot-yellow"></span>
+                                <span class="dot-green"></span>
+                            </div>
+                            <span class="terminal-title">Console Output</span>
+                        </div>
+                        <p id="arrayResult" class="result-content"></p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 3. Form Validation -->
+            <section class="card">
+                <div class="card-header">
+                    <div class="card-title-row">
+                        <h2><span class="step-num">3</span> Form Validation</h2>
+                        <span class="card-tag">Validation &amp; Regex</span>
+                    </div>
+                    <p class="card-desc">Validates non-empty name, email regex pattern, and age between 18 and 100.</p>
+                </div>
+                <div class="card-body">
+                    <div class="form-group">
+                        <label for="name">Full Name</label>
+                        <input type="text" id="name" placeholder="Enter name">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="text" id="email" placeholder="Enter email">
+                    </div>
+                    <div class="form-group">
+                        <label for="age">Age (18 - 100)</label>
+                        <input type="number" id="age" placeholder="Enter age">
+                    </div>
+                    <button class="btn-primary" onclick="validateForm()">Submit</button>
+                    <div class="terminal-wrapper">
+                        <div class="terminal-header">
+                            <div class="terminal-dots">
+                                <span class="dot-red"></span>
+                                <span class="dot-yellow"></span>
+                                <span class="dot-green"></span>
+                            </div>
+                            <span class="terminal-title">Console Output</span>
+                        </div>
+                        <p id="formResult" class="result-content"></p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 4. Student Object -->
+            <section class="card">
+                <div class="card-header">
+                    <div class="card-title-row">
+                        <h2><span class="step-num">4</span> Student Object</h2>
+                        <span class="card-tag">Objects &amp; Mutation</span>
+                    </div>
+                    <p class="card-desc">Mutates student object by adding a class property and updating grades.</p>
+                </div>
+                <div class="card-body">
+                    <div class="form-group">
+                        <label>Initial Object State</label>
+                        <pre class="code-preview"><code>let student = {
+  name: "Yuvraj",
+  age: 20,
+  grades: [85, 90, 95]
+};</code></pre>
+                    </div>
+                    <button class="btn-primary" onclick="studentOperations()">Perform Student Operations</button>
+                    <div class="terminal-wrapper">
+                        <div class="terminal-header">
+                            <div class="terminal-dots">
+                                <span class="dot-red"></span>
+                                <span class="dot-yellow"></span>
+                                <span class="dot-green"></span>
+                            </div>
+                            <span class="terminal-title">Console Output</span>
+                        </div>
+                        <p id="studentResult" class="result-content"></p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 5. Array Methods -->
+            <section class="card card-full">
+                <div class="card-header">
+                    <div class="card-title-row">
+                        <h2><span class="step-num">5</span> Array Methods (map, filter, reduce)</h2>
+                        <span class="card-tag">Functional Methods</span>
+                    </div>
+                    <p class="card-desc">Filters even numbers, doubles them with map(), and computes their sum with reduce().</p>
+                </div>
+                <div class="card-body">
+                    <div class="form-group">
+                        <label for="methodNumbers">Numbers List (comma-separated)</label>
+                        <input type="text" id="methodNumbers" placeholder="Enter numbers separated by commas">
+                    </div>
+                    <div class="quick-chips">
+                        <span>Sample:</span>
+                        <button type="button" class="chip-btn" onclick="fillMethodNumbers('1, 2, 3, 4, 5, 6')">1, 2, 3, 4, 5, 6</button>
+                        <button type="button" class="chip-btn" onclick="fillMethodNumbers('10, 15, 20, 25, 30, 40')">10, 15, 20, 25, 30, 40</button>
+                        <button type="button" class="chip-btn" onclick="fillMethodNumbers('2, 4, 6, 8, 10')">2, 4, 6, 8, 10</button>
+                    </div>
+                    <button class="btn-primary" onclick="arrayMethods()">Calculate</button>
+                    <div class="terminal-wrapper">
+                        <div class="terminal-header">
+                            <div class="terminal-dots">
+                                <span class="dot-red"></span>
+                                <span class="dot-yellow"></span>
+                                <span class="dot-green"></span>
+                            </div>
+                            <span class="terminal-title">Console Output</span>
+                        </div>
+                        <p id="methodResult" class="result-content"></p>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+
+        <!-- Footer -->
+        <footer class="main-footer">
+            <p>JavaScript Practical &bull; <strong>Assignment 6</strong> &bull; Developed by <strong>Yuvraj</strong></p>
+        </footer>
+    </div>
+
+    <script>
+        // Helper sample-fill functions
+        function fillNumbers(val) {
+            document.getElementById("numbers").value = val;
+        }
+
+        function fillMethodNumbers(val) {
+            document.getElementById("methodNumbers").value = val;
+        }
+
+        // 1. Arithmetic Operations
+        function arithmetic() {
+            let a = Number(document.getElementById("num1").value);
+            let b = Number(document.getElementById("num2").value);
+
+            let result = `
+                Sum: ${a + b}<br>
+                Difference: ${a - b}<br>
+                Product: ${a * b}<br>
+                Quotient: ${b !== 0 ? a / b : "Cannot divide by zero"}
+            `;
+
+            document.getElementById("arithmeticResult").innerHTML = result;
+        }
+
+        // 2. Array Operations
+        function arrayOperations() {
+            let arr = document.getElementById("numbers").value.split(",").map(Number);
+
+            if (arr.length !== 5 || arr.some(n => !Number.isFinite(n))) {
+                document.getElementById("arrayResult").innerHTML = "Enter exactly 5 valid numbers.";
+                return;
+            }
+
+            let largest = Math.max(...arr);
+            let smallest = Math.min(...arr);
+
+            let ascending = [...arr].sort((a, b) => a - b);
+            let descending = [...arr].sort((a, b) => b - a);
+
+            document.getElementById("arrayResult").innerHTML = `
+                Largest: ${largest}<br>
+                Smallest: ${smallest}<br>
+                Ascending: ${ascending.join(", ")}<br>
+                Descending: ${descending.join(", ")}
+            `;
+        }
+
+        // 3. Form Validation
+        function validateForm() {
+            let name = document.getElementById("name").value.trim();
+            let email = document.getElementById("email").value.trim();
+            let age = Number(document.getElementById("age").value);
+
+            let emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+            if (name === "") {
+                alert("Name cannot be empty!");
+            }
+            else if (!emailPattern.test(email)) {
+                alert("Enter a valid email!");
+            }
+            else if (document.getElementById("age").value === "" || !Number.isFinite(age) || age < 18 || age > 100) {
+                alert("Age must be between 18 and 100!");
+            }
+            else {
+                document.getElementById("formResult").innerHTML =
+                    "Form submitted successfully!<br>Name: " + name +
+                    "<br>Email: " + email + "<br>Age: " + age;
+            }
+        }
+
+        // 4. Student Object
+        function studentOperations() {
+            let student = {
+                name: "Yuvraj",
+                age: 20,
+                grades: [85, 90, 95]
+            };
+
+            // Add new property
+            student.class = "Computer Engineering";
+
+            // Update student's grade
+            student.grades[0] = 92;
+
+            // Display student information
+            document.getElementById("studentResult").innerHTML =
+                "Name: " + student.name + "<br>" +
+                "Age: " + student.age + "<br>" +
+                "Grades: " + student.grades.join(", ") + "<br>" +
+                "Class: " + student.class;
+        }
+
+        // 5. Array Methods
+        function arrayMethods() {
+            let arr = document.getElementById("methodNumbers").value.split(",").map(Number);
+
+            if (arr.length === 0 || document.getElementById("methodNumbers").value.trim() === "" || arr.some(n => !Number.isFinite(n))) {
+                document.getElementById("methodResult").innerHTML = "Enter valid numbers.";
+                return;
+            }
+
+            // Remove odd numbers
+            let evenNumbers = arr.filter(n => n % 2 === 0);
+
+            // Multiply remaining numbers by 2
+            let doubled = evenNumbers.map(n => n * 2);
+
+            // Find sum using reduce
+            let sum = doubled.reduce((total, n) => total + n, 0);
+
+            document.getElementById("methodResult").innerHTML = `
+                Original Array: ${arr.join(", ")}<br>
+                Even Numbers: ${evenNumbers.join(", ")}<br>
+                Doubled Numbers: ${doubled.join(", ")}<br>
+                Sum: ${sum}
+            `;
+        }
+    </script>
+</body>
+</html>
